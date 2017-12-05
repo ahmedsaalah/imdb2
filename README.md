@@ -2,14 +2,14 @@
 # imdb
 # First phase
 
-~Views
+-~~Views
 
-~DB structure
+-~~DB structure
 
 -ADD , Edit & delete
 
-make everything work together
+-Make everything work together
 
 # Second phase
 
-get moves from imdb
+-Get moves from imdb
