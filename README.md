@@ -1,4 +1,11 @@
-# zakYes
+
 # imdb
-modal on randezvous run first movie
-page details and trailer base movie second movie
+# First phase
+~Views
+~DB structure
+ADD , Edit & delete
+make everything work together
+
+# Second phase
+
+get moves from imdb
