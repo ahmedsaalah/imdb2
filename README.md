@@ -2,9 +2,9 @@
 # imdb
 # First phase
 
--~~Views
+-~~Views~~
 
--~~DB structure
+-~~DB structure~~
 
 -ADD , Edit & delete
 
