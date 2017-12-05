@@ -1,0 +1,281 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="header-pad"></div>
+<!--/header-->
+<!-- main -->
+<div id="main" class="page-blank page-split page-request">
+<div class="container">
+    <div class="main-content">
+        <div class="page-split-left">
+            <h2 class="page-title text-center mt20">Movies request</h2>
+            <div class="dmcal-content">
+                <p>Search movies before sending the request. Please leave movie name, more info and message, we will
+                    send back soon.</p>
+                <p>&nbsp;</p>
+                <div style="display: none;" id="message-success" class="alert alert-success">Request success.
+                    Thanks you!
+                </div>
+                <div class="page-request-form mt20">
+                    <form id="request-form" class="form-horizontal" method="post">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input name="name" required type="text" placeholder="Movie Name (*)"
+                                       class="form-control input-lg">
+                            </div>
+                        </div>
+                        <div class="form-group mt20">
+                            <div class="col-sm-12">
+                                <textarea name="more_info" placeholder="More Info" class="form-control input-lg"
+                                          rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group mt20">
+                            <div class="col-sm-12">
+                                <textarea name="message" placeholder="Message" class="form-control input-lg"
+                                          rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <button id="request-submit" type="submit" class="btn btn-lg btn-block btn-success btn-approve mt10"><i
+                                        class="icon-send mr10"></i>Send request
+                                </button>
+                                <div style="display: none; background: transparent;" id="request-loading" class="cssload-center">
+                                    <div class="cssload"><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="page-split-right">
+            <h2 class="page-title text-center mt20">Via Facebook</h2>
+            <div class="fb-comments" data-colorscheme="dark" data-href="https://yesmovies.to/request.html"
+                 data-width="100%" data-numposts="5"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+</div>
+<!--/main -->
+<!--footer-->
+<footer>
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-1 footer-block1"></div>
+            <div class="col-sm-2 footer-block footer-block2">
+                <p><a title="Action" href="https://yesmovies.to/genre/action.html">Action</a></p>
+                <p><a title="Adventure" href="https://yesmovies.to/genre/adventure.html">Adventure</a></p>
+                <p><a title="Animation" href="https://yesmovies.to/genre/animation.html">Animation</a></p>
+                <p><a title="Biography" href="https://yesmovies.to/genre/biography.html">Biography</a></p>
+                <p><a title="Comedy" href="https://yesmovies.to/genre/comedy.html">Comedy</a></p>
+                <p><a title="Costume" href="https://yesmovies.to/genre/costume.html">Costume</a></p>
+                <p><a title="Crime" href="https://yesmovies.to/genre/crime.html">Crime</a></p>
+            </div>
+            <div class="col-sm-2 footer-block footer-block3">
+                <p><a title="Documentary" href="https://yesmovies.to/genre/documentary.html">Documentary</a></p>
+                <p><a title="Drama" href="https://yesmovies.to/genre/drama.html">Drama</a></p>
+                <p><a title="Family" href="https://yesmovies.to/genre/family.html">Family</a></p>
+                <p><a title="Fantasy" href="https://yesmovies.to/genre/fantasy.html">Fantasy</a></p>
+                <p><a title="History" href="https://yesmovies.to/genre/history.html">History</a></p>
+                <p><a title="Horror" href="https://yesmovies.to/genre/horror.html">Horror</a></p>
+                <p><a title="Kungfu" href="https://yesmovies.to/genre/kungfu.html">Kungfu</a></p>
+            </div>
+            <div class="col-sm-2 footer-block footer-block4">
+                <p><a title="Musical" href="https://yesmovies.to/genre/musical.html">Musical</a></p>
+                <p><a title="Mystery" href="https://yesmovies.to/genre/mystery.html">Mystery</a></p>
+                <p><a title="Mythological" href="https://yesmovies.to/genre/mythological.html">Mythological</a></p>
+                <p><a title="Psychological" href="https://yesmovies.to/genre/psychological.html">Psychological</a>
+                </p>
+                <p><a title="Romance" href="https://yesmovies.to/genre/romance.html">Romance</a></p>
+                <p><a title="Sci-Fi" href="https://yesmovies.to/genre/sci-fi.html">Sci-Fi</a></p>
+                <p><a title="Sitcom" href="https://yesmovies.to/genre/sitcom.html">Sitcom</a></p>
+            </div>
+            <div class="col-sm-2 footer-block footer-block5">
+                <p><a title="Sport" href="https://yesmovies.to/genre/sport.html">Sport</a></p>
+                <p><a title="Thriller" href="https://yesmovies.to/genre/thriller.html">Thriller</a></p>
+                <p><a title="TV-Show" href="https://yesmovies.to/genre/tv-show.html">TV-Show</a></p>
+                <p><a title="War" href="https://yesmovies.to/genre/war.html">War</a></p>
+                <p><a title="United States" href="https://yesmovies.to/country/united-states.html">United
+                        States</a></p>
+                <p><a title="Korea" href="https://yesmovies.to/country/korea.html">Korea</a></p>
+                <p><a title="Japan" href="https://yesmovies.to/country/japan.html">Japan</a></p>
+            </div>
+            <div class="col-sm-2 footer-block footer-block6">
+                <p><a title="HongKong" href="https://yesmovies.to/country/hongkong.html">HongKong</a></p>
+                <p><a title="France" href="https://yesmovies.to/country/france.html">France</a></p>
+                <p><a title="Asia" href="https://yesmovies.to/country/asia.html">Asia</a></p>
+                <p><a title="Thailand" href="https://yesmovies.to/country/thailand.html">Thailand</a></p>
+                <p><a title="United Kingdom" href="https://yesmovies.to/country/united-kingdom.html">United
+                        Kingdom</a></p>
+                <p><a title="India" href="https://yesmovies.to/country/india.html">India</a></p>
+                <p><a title="International"
+                      href="https://yesmovies.to/country/international.html">International</a></p>
+            </div>
+            <div class="col-sm-1 footer-block7"></div>
+            <div class="clearfix"></div>
+        </div>
+        <div id="copyright">
+            <p><img alt="yesmovies.to" border="0" src="https://yesmovies.to/assets/images/logo-footer.png"
+                    class="mv-ft-logo"></p>
+            <p>Copyright &copy; <a href="https://yesmovies.to/" title="yesmovies.to">Yesmovies.to</a>. All Rights
+                Reserved</p>
+            <p style="font-size: 11px; line-height: 14px;">Disclaimer: This site does not store any files on its
+                server. All contents are provided by non-affiliated third parties.</p>
+        </div>
+        <div id="footer-social">
+            <a href="#" class="fs-icon fs-facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="fs-icon fs-twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="fs-icon fs-google"><i class="fa fa-google-plus"></i></a>
+        </div>
+        <div id="footer-menu">
+            <a href="https://yesmovies.to/terms.html" title="Privacy Policy">Terms & Privacy Policy</a>
+            <a href="https://yesmovies.to/dmca.html" title="DMCA">DMCA</a>
+        </div>
+    </div>
+    <div class="footer-tl text-center mt5" style="font-size:8px; line-height: 1.1em;">
+        <style>.footer-tl a {
+                color: #232122;
+            }</style>
+        <a href="https://gostream.is/" class="mr10" title="123movies">123movies</a>
+    </div>
+</div>
+</footer>
+<!--/footer-->
+</div>
+<div class="clearfix"></div>
+<div id="auth-modal">
+<!-- Modal -->
+<div class="modal fade modal-cuz" id="pop-auth" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-tabs">
+            <ul id="md-list" class="nav nav-tabs" role="tablist">
+                <li class="active"><a id="tab-login" href="#modal-login" role="tab" data-toggle="tab"><i
+                            class="icon-perm_identity mr5"></i><strong>Login</strong></a></li>
+                <li><a id="tab-register" href="#modal-register" role="tab" data-toggle="tab"><i
+                            class="icon-add_circle_outline mr5"></i><strong>Register</strong></a></li>
+                <li class="pull-right"><a class="close" data-dismiss="modal" aria-label="Close"><i
+                            class="icon-clear"></i></a></li>
+            </ul>
+        </div>
+        <div class="modal-content tab-content">
+            <div id="modal-login" class="tab-pane in fade active">
+                <div class="modal-body">
+                    <!--                        <div class="cuz-login-social">-->
+                    <!--                            <p class="desc text-center">Log in with your Facebook account.</p>-->
+                    <!--                            <div class="cls-list mt10">-->
+                    <!--                                <a href="-->
+                    <? //= site_url('user/login_fb?return_url=' . current_url()) ?><!--"-->
+                    <!--                                   class="btn btn-block btn-facebook"><i-->
+                    <!--                                        class="fa fa-facebook-square mr10"></i>Facebook</a>-->
+                    <!--                                <a href="-->
+                    <? //= site_url('user/login_gg?return_url=' . current_url()) ?><!--"-->
+                    <!--                                   class="btn btn-block btn-google"><i class="fa fa-google-plus-square mr10"></i>Google+</a>-->
+                    <!--                                <div class="clearfix"></div>-->
+                    <!--                            </div>-->
+                    <!--                        </div>-->
+                    <!--                        <p class="desc text-center mb10">- Or use your Yesmovies account.</p>-->
+                    <form id="login-form" method="post">
+                        <div class="block">
+                            <input required type="text" class="form-control" name="username" id="username"
+                                   placeholder="Username">
+                        </div>
+                        <div class="block mt10">
+                            <input required type="password" class="form-control" name="password" id="password"
+                                   placeholder="Password">
+                        </div>
+                        <div class="alert alert-danger error-message" id="error-message"></div>
+                        <div class="block mt20 small">
+                            <label><input type="checkbox" class="mr5"> Remember me</label>
+                            <div class="pull-right">
+                                <a data-toggle="tab" id="open-forgot"
+                                   href="#modal-forgot"
+                                   title="Forgot password?">Forgot password?</a>
+                            </div>
+                        </div>
+                        <button type="submit" id="login-submit" class="btn btn-block btn-success btn-approve mt10">
+                            Login
+                        </button>
+                        <div style="display: none;" id="login-loading" class="cssload-center">
+                            <div class="cssload"><span></span></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer text-center">
+                    Not a member yet? <a id="toggle-register" title="Join now!"><strong>Join now!</strong></a>
+                </div>
+            </div>
+            <div id="modal-register" class="tab-pane in fade">
+                <div class="modal-body">
+                    <p class="desc">When becoming members of the site, you could use the full range of functions and
+                        enjoy the most exciting films.</p>
+                    <form id="register-form" method="post">
+                        <div class="block">
+                            <input required type="text" class="form-control" name="full_name" id="full_name"
+                                   placeholder="Full name">
+                        </div>
+                        <div id="error-full_name" class="alert alert-danger error-message"></div>
+                        <div class="block">
+                            <input required type="text" class="form-control" name="username" id="username"
+                                   placeholder="Username">
+                        </div>
+                        <div id="error-username" class="alert alert-danger error-message"></div>
+                        <div class="block">
+                            <input required type="email" class="form-control" name="email" id="email"
+                                   placeholder="Email">
+                        </div>
+                        <div id="error-email" class="alert alert-danger error-message"></div>
+                        <div class="block">
+                            <input required type="password" class="form-control" name="password" id="password"
+                                   placeholder="Password">
+                        </div>
+                        <div id="error-password" class="alert alert-danger error-message"></div>
+                        <div class="block">
+                            <input required type="password" class="form-control" name="confirm_password"
+                                   id="confirm_password"
+                                   placeholder="Confirm Password">
+                        </div>
+                        <div id="error-confirm_password" class="alert alert-danger error-message"></div>
+                        <button id="register-submit" type="submit"
+                                class="btn btn-block btn-success btn-approve mt20">Register
+                        </button>
+                        <div style="display: none;" id="register-loading" class="cssload-center">
+                            <div class="cssload"><span></span></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer text-center">
+                    <a href="javascript:void(0)" id="toggle-login" title="Back to login"><i
+                            class="fa fa-chevron-left mr10"></i> Back to login</a>
+                </div>
+            </div>
+            <div id="modal-forgot" class="tab-pane in fade">
+                <div class="modal-body">
+                    <p class="desc">We will send authorize code to your email. Please fill your email to form
+                        below.</p>
+                    <form id="forgot-form">
+                        <div class="block mt10">
+                            <input type="email" class="form-control" name="email" id="Email"
+                                   placeholder="Your email">
+                        </div>
+                        <div style="display: none;" id="forgot-success-message" class="alert alert-success"></div>
+                        <div style="display: none;" id="forgot-error-message" class="alert alert-danger"></div>
+                        <button id="forgot-submit" type="submit" class="btn btn-block btn-success btn-approve mt20">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-footer text-center">
+                    <a data-toggle="tab" href="#modal-login" title="Back to login">
+                        <i class="fa fa-chevron-left mr10"></i> Back to login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ modal -->
+{% endblock %}
